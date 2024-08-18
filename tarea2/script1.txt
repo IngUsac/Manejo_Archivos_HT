@@ -1,0 +1,16 @@
+# Creación y reporte de disco
+mkdisk -size 2 -name disco2b
+rep -name disco2b
+
+# Creación y reporte de otro disco creado 
+mkdisk -size 4 -name disco4b
+rep -name disco4b
+
+#reporte de disco no creado
+rep -name disco5
+
+# Este script no lleva tamaño de disco por lo tanto no lo crea
+mkdisk -size -name disco3b
+
+# Generando un reporte del disco creado sin indicar tamaño, no genera reporte
+rep -name disco3b

@@ -1,0 +1,43 @@
+digraph G {
+    // Configuraciones generales del gráfico
+    node [shape=box, style=filled, fillcolor=white, color="#15640a", width=3, height=1.2];
+
+    // Crear subgrafo que represente el disco completo
+    subgraph cluster_disk {
+        label="Hoja de Trabajo 2 - Gustavo Adolfo Lorenzana Ecute - 9516098";
+        color="#6200ff";
+        
+
+      
+        subgraph cluster_primary1 {
+            label="";
+
+        
+            // Particiones dentro de la partición primaria 1
+            Libre3 [label="Libre3\n50.0 por ciento del Disco", shape=box, width=2, height=4];
+      
+        }
+        
+        // Crear subgrafo para la partición extendida
+        subgraph cluster_extended {
+            label="Extendida";
+            color="#ff9100";
+        
+    // Particiones dentro de la partición extendida                        
+            
+            Logica2 [label="Logica\n20.0 por ciento del Disco", shape=box, style="filled", width=2, height=3];
+            EBR2 [label="EBR\n20.0 por ciento del Disco", shape=box, style="filled", width=1, height=3];
+            Libre1 [label="Libre\n10.0 por ciento del Disco", shape=box, width=2, height=3];
+            Logica1 [label="Logica\n20.0 por ciento del Disco", shape=box, width=2, height=3];
+            EBR1 [label="EBR", shape=box, style="filled", width=1, height=3];
+            
+            }     
+        
+        subgraph extendidaMBR {
+            // Nodo para MBR
+            MBR [label="MBR", shape=box, style="filled", width=2, height=4];
+        }
+        
+    } 
+
+}
