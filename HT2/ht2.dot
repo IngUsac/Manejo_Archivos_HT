@@ -1,29 +1,21 @@
-digraph G {
-    // Configuraciones generales del gráfico
+digraph G {      // Configuraciones generales del gráfico
     node [shape=box, style=filled, fillcolor=white, color="#15640a", width=3, height=1.2];
 
-    // Crear subgrafo que represente el disco completo
-    subgraph cluster_disk {
+    subgraph cluster_disk {   // Crear subgrafo que represente el disco completo
         label="Hoja de Trabajo 2 - Gustavo Adolfo Lorenzana Ecute - 9516098";
         color="#6200ff";
-        
-
       
         subgraph cluster_primary1 {
             label="";
-
-        
-            // Particiones dentro de la partición primaria 1
-            Libre3 [label="Libre3\n50.0 por ciento del Disco", shape=box, width=2, height=4];
-      
+   
+            Libre3 [label="Libre3\n50.0 por ciento del Disco", shape=box, width=2, height=4];              // Particiones dentro de la partición primaria 1
         }
-        
-        // Crear subgrafo para la partición extendida
-        subgraph cluster_extended {
+         
+        subgraph cluster_extended {         // Crear subgrafo para la partición extendida
             label="Extendida";
             color="#ff9100";
         
-    // Particiones dentro de la partición extendida                        
+            // Particiones dentro de la partición extendida                        
             
             Logica2 [label="Logica\n20.0 por ciento del Disco", shape=box, style="filled", width=2, height=3];
             EBR2 [label="EBR\n20.0 por ciento del Disco", shape=box, style="filled", width=1, height=3];
@@ -32,12 +24,9 @@ digraph G {
             EBR1 [label="EBR", shape=box, style="filled", width=1, height=3];
             
             }     
-        
-        subgraph extendidaMBR {
-            // Nodo para MBR
-            MBR [label="MBR", shape=box, style="filled", width=2, height=4];
-        }
-        
-    } 
 
+        subgraph extendidaMBR { // Nodo para MBR            
+            MBR [label="MBR", shape=box, style="filled", width=2, height=4];
+        }        
+    } 
 }
